@@ -6,9 +6,9 @@ int main() {
     int matrix[100][100];
 
   
-    printf("Enter the number of rows (between 1 and 100): ");
+    printf("Enter the number of rows : ");
     scanf("%d", &r);
-    printf("Enter the number of columns (between 1 and 100): ");
+    printf("Enter the number of columns: ");
     scanf("%d", &c);
 
   
