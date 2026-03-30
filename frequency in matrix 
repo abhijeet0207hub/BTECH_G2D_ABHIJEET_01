@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int r, c, i, j, searchNum;
+    int count = 0; // Initialize the counter to 0
+    int matrix[100][100];
+
+  
+    printf("Enter the number of rows (between 1 and 100): ");
+    scanf("%d", &r);
+    printf("Enter the number of columns (between 1 and 100): ");
+    scanf("%d", &c);
+
+  
+    printf("\nEnter the elements of the matrix:\n");
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            printf("Enter element [%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    printf("\nEnter the number you want to find the frequency of: ");
+    scanf("%d", &searchNum);
+
+   
+    for (i = 0; i < r; ++i) {
+        for (j = 0; j < c; ++j) {
+            if (matrix[i][j] == searchNum) {
+                count++;
+            }
+        }
+    }
+
+    // Print the final result
+    if (count > 0) {
+        printf("\nThe number %d appears %d time(s) in the matrix.\n", searchNum, count);
+    } else {
+        printf("\nThe number %d is not present in the matrix.\n", searchNum);
+    }
+
+    return 0;
+}
